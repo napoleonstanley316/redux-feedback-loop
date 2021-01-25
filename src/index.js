@@ -22,6 +22,12 @@ const feedback = (state = newFeedback, action) => {
   switch (action.type) {
     case 'SET_FEELING':
       return {...state, feeling: action.payload };
+      case 'SET_CONTENT':
+        return {...state, content: action.payload};
+        case 'SET_SUPPORT':
+          return {...state, support: action.payload};
+          case 'SET_COMMENTS':
+            return {...state, comments: action.payload};
       case 'NEW_FEEDBACK':
         return newFeedback
     default:

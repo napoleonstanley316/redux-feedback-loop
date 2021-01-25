@@ -1,13 +1,14 @@
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import axios from 'axios';
 
 function Review() {
   const history = useHistory();
   const feedback = useSelector((state) => state.feedback);
 
   const handleClick = () => {
-    axios
-      .post("/feedback", feedback)
+    
+     axios.post("/feedback", feedback)
       .then((response) => {
         history.push("/finished");
       })

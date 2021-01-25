@@ -12,18 +12,15 @@ import {
   Redirect,
 } from "react-router-dom";
 import Today from '../Today/Today.jsx'
+import Review from '../Review/Review.jsx';
 
 function Finished() {
-
-  
  
-console.log('in /Finished');
+console.log('in /finished');
 const dispatch = useDispatch
   const handleNext = () => {
-    event.preventDefault();
     console.log("handleNext clicked in /finished");
-    <Home />
-    history.pushState('/')
+    history.push('/')
     dispatch({type: 'NEW_FEEDBACK'})
   };
   return (
