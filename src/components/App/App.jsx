@@ -9,6 +9,7 @@ import Today from "../Today/Today.jsx";
 import Content from "../Content/Content.jsx";
 import Supported from "../Supported/Supported.jsx";
 import Comments from "../Comments/Comments.jsx";
+import Review from "../Review/Review.jsx";
 import Finished from "../Finished/Finished.jsx";
 import NumericInput from "react-numeric-input";
 
@@ -43,14 +44,26 @@ function App() {
         <h1 className="App-title">Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
-      <main>
-        <Home />
-        {/* <Today /> */}
-        {/* <Content /> */}
-        {/* <Supported /> */}
-        {/* <Comments /> */}
-        {/* <Finished /> */}
-      </main>
+      <Router>
+       <Route path="/" exact>
+         <Today />
+       </Route>
+       <Route path="/content">
+         <Content />
+       </Route>
+       <Route path="/supported">
+         <Supported />
+       </Route>
+       <Route path="/comments">
+         <Comments />
+       </Route>
+       <Route path="/review">
+         <Review />
+       </Route>
+       <Route path="/finished">
+         <Finished />
+       </Route>
+    </Router>
     </div>
   );
 }

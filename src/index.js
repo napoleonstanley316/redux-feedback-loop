@@ -7,30 +7,32 @@ import "./index.css";
 import App from "./components/App/App";
 import registerServiceWorker from "./registerServiceWorker";
 
-const feedback = (state = [], action) => {};
 
-const newFeedback = (
-  state = {
-    feeling: "",
-    understanding: "",
-    support: "",
-    comments: "",
-    flagged: "",
-    date: "",
-  },
-  action
-) => {
+
+const newFeedback = {
+ 
+    feeling: '1',
+    understanding: '1',
+    support: '1',
+    comments: '',
+  }
+
+const feedback = (state = newFeedback, action) => {
+
   switch (action.type) {
-    case "SET_NEW_FEEDBACK":
-      return action.payload;
+    case 'SET_FEELING':
+      return {...state, feeling: action.payload };
+      case 'NEW_FEEDBACK':
+        return newFeedback
     default:
       return state;
-  }
-};
+}
+}
+
 
 const reduxStore = createStore(
   combineReducers({
-    newFeedback,
+    feedback,
   }),
   applyMiddleware(logger)
 );
