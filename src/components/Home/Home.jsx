@@ -15,25 +15,19 @@ import {
 import Today from "../Today/Today.jsx";
 
 function Home() {
-  const [feeling, setFeeling] = useState("1");
   const history = useHistory();
-  const dispatch = useDispatch();
+
   const handleNext = () => {
-    console.log(feeling);
+    // move to /today page
     history.push("/today");
-    // event.preventDefault();
+
     console.log("handleNext clicked in /Home");
-    // <Today/>;
-    const action = {
-      type: "SET_FEELING",
-      payload: feeling,
-    };
-    dispatch(action);
   };
 
   return (
     <form>
-      <h3>Click 'Next' to start your feedback</h3>
+      <h3>Welcome!</h3>
+      <h4>Click 'Next' to start your feedback</h4>
       <button onClick={handleNext}>NEXT</button>
     </form>
   );
