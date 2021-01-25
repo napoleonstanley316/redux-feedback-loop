@@ -13,16 +13,16 @@ import NumericInput from "react-numeric-input";
 function App() {
   const dispatch = useDispatch();
 
-  // TODO - GET feedback from server
+  // GET feedback on page load
   useEffect(() => {
     getFeedback();
   }, []);
-
+// GET route
   const getFeedback = () => {
     axios
       .get("/feedback")
       .then((response) => {
-        // do stuff with data! response.data
+        // returned data
         const action = {
           type: "SET_NEW_FEEDBACK",
           payload: response.data,
@@ -33,22 +33,19 @@ function App() {
         alert("error in GET feedback");
         console.error(err);
       });
-  };
+    }
 
   return (
-    <Router>
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Feedback!</h1>
           <h4>Don't forget it!</h4>
         </header>
-        <Link to="/today">
-          <button type="button">BEGIN FEEDBACK</button>
-        </Link>
-        <Route path="/today" component={Today} />
+        <main>
+        <Today />
+        </main>
       </div>
-    </Router>
-  );
+  )
 }
 
 export default App;

@@ -10,25 +10,22 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-import Finished from "../Finished/Finished.jsx";
+import Today from '../Today/Today.jsx'
 
-function Content() {
+function Finished() {
   event.preventDefault();
-  const content = useSelector((store) => store.content);
 
   const handleNext = () => {
-    console.log("handleNext clicked in /Content");
-    <Supported />;
+    console.log("handleNext clicked in /finished");
+    <Today />
   };
-
   return (
     <form>
-      <h3>How well did you understand today's material?</h3>
-      <h5>Select One (1= Not at all : 3 = Very Well)</h5>
-      <input type="number" min="1" max="3" step="1"></input>
+      <h3>Success!</h3>
+
       <button onClick={handleNext}>NEXT</button>
     </form>
   );
 }
 
-export default Content;
+export default Finished;

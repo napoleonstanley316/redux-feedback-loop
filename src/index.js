@@ -28,7 +28,12 @@ const newFeedback = (
   }
 };
 
-const reduxStore = createStore(combineReducers({}), applyMiddleware(logger));
+const reduxStore = createStore(
+  combineReducers({
+    newFeedback,
+  }),
+  applyMiddleware(logger)
+);
 
 ReactDOM.render(
   <Provider store={reduxStore}>
