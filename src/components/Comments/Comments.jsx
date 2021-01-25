@@ -13,7 +13,7 @@ import {
 import Finished from "../Finished/Finished.jsx";
 
 function Content() {
-  event.preventDefault();
+
   const content = useSelector((store) => store.content);
 
   const handleNext = () => {
@@ -23,9 +23,8 @@ function Content() {
 
   return (
     <form>
-      <h3>How well did you understand today's material?</h3>
-      <h5>Select One (1= Not at all : 3 = Very Well)</h5>
-      <input type="number" min="1" max="3" step="1"></input>
+      <h3>Are there any other comments you would like to add?</h3>
+      <input type="text"></input>
       <button onClick={handleNext}>NEXT</button>
     </form>
   );

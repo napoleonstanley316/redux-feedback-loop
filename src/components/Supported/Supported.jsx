@@ -13,7 +13,7 @@ import {
 import Comments from "../Comments/Comments.jsx";
 
 function Supported() {
-  event.preventDefault();
+
   const support = useSelector((store) => store.support);
 
   const handleNext = () => {

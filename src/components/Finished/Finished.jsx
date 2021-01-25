@@ -13,17 +13,17 @@ import {
 import Today from '../Today/Today.jsx'
 
 function Finished() {
-  event.preventDefault();
-
+console.log('in /Finished');
   const handleNext = () => {
     console.log("handleNext clicked in /finished");
-    <Today />
+    <Start />
   };
   return (
     <form>
       <h3>Success!</h3>
+      <h3>Thanks for your feedback!</h3>
 
-      <button onClick={handleNext}>NEXT</button>
+      <button onClick={handleNext}>Return Home</button>
     </form>
   );
 }

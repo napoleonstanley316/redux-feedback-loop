@@ -14,7 +14,7 @@ import Supported from "../Supported/Supported.jsx";
 import Comments from "../Comments/Comments.jsx";
 
 function Content() {
-  event.preventDefault();
+  
   const content = useSelector((store) => store.content);
 
   const handleNext = () => {
