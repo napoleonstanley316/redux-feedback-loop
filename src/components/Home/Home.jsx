@@ -17,6 +17,7 @@ import Today from '../Today/Today.jsx'
 function Home () {
 
     const handleNext = () => {
+      event.preventDefault();
         console.log("handleNext clicked in /Home");
         <Today/>;
       };

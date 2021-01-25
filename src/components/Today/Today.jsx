@@ -15,9 +15,11 @@ import Supported from "../Supported/Supported.jsx";
 import Comments from "../Comments/Comments.jsx";
 
 function Today() {
+
+
   const feeling = useSelector((store) => store.feeling);
   const handleNext = () => {
-    
+    event.preventDefault();
     console.log("handleNext in /today clicked");
     <Content />;
   };

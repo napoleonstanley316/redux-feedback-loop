@@ -13,10 +13,12 @@ import {
 import Today from '../Today/Today.jsx'
 
 function Finished() {
+ 
 console.log('in /Finished');
   const handleNext = () => {
+    event.preventDefault();
     console.log("handleNext clicked in /finished");
-    <Start />
+    <Home />
   };
   return (
     <form>

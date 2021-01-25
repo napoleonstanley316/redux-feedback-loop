@@ -12,13 +12,13 @@ import {
 } from "react-router-dom";
 import Finished from "../Finished/Finished.jsx";
 
-function Content() {
-
-  const content = useSelector((store) => store.content);
+function Comments() {
+  const comments = useSelector((store) => store.comments);
 
   const handleNext = () => {
-    console.log("handleNext clicked in /Content");
-    <Supported />;
+    event.preventDefault();
+    console.log("handleNext clicked in /Comments");
+    <Finished />;
   };
 
   return (
@@ -30,4 +30,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default Comments;

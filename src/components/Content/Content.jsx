@@ -18,6 +18,7 @@ function Content() {
   const content = useSelector((store) => store.content);
 
   const handleNext = () => {
+    event.preventDefault();
     console.log("handleNext clicked in /Content");
     <Supported />;
   };
